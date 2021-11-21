@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Dawid Oleksiuk">
+    <meta name="description" content="Discover hiking in Norway.">
+    <meta property="og:title" content="Hiking in Norway" >
+    <meta property="og:type" content="website" >
+    <meta property="og:description" content="Discover hiking in Norway." >
+    <meta property="og:locale" content="pl_PL" >
+    <meta property="og:url" content="{{ .Site.BaseURL }}">
+    <meta property="og:locale:alternate" content="en_US" >
+    <meta name="twitter:site" content="@DawidOleksiuk">
+    <meta name="twitter:title" content="Hiking in Norway">
+    <meta name="twitter:description" content="Discover hiking in Norway">
+
+    <title>{{ .Site.Title }}</title>
+
+    <link rel="stylesheet" href="{{ (resources.Get "build/main.css").RelPermalink }}">
+
+    <script src="{{ (resources.Get "build/runtime.js").RelPermalink }}" defer></script>
+    <script src="{{ (resources.Get "build/vendor.js").RelPermalink }}" defer></script>
+    <script src="{{ (resources.Get "build/main.js").RelPermalink }}" defer></script>
+</head>

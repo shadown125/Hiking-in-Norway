@@ -1,0 +1,9 @@
+{{ partial "head.html" . }}
+
+<body>
+    {{ block "header" . }}{{ end }}
+    <main class="page-body">
+        {{ block "content" . }}{{ end }}
+    </main>
+    {{ partial "footer.html" . }}
+</body>
