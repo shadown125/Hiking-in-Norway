@@ -1,0 +1,77 @@
+@use "../susanoo";
+@use '../lists';
+@use '../icons';
+
+.staging {
+    background: {
+        image: url("/hikingStage.jpg");
+        position: center;
+    }
+    object-fit: cover;
+    .social-list {
+        @include lists.reset-list();
+        display: flex;
+        margin: {
+            bottom: susanoo.rem-calc(24);
+        }
+    }
+    li {
+        span {
+            display: none;
+        }
+    }
+    a {
+        &::before {
+            @include susanoo.icon(null, true);
+            margin: 0 susanoo.rem-calc(10);
+            font: {
+                size: susanoo.rem-calc(map-get(icons.$icon-sizes, "default"));
+            }
+        }
+        &.facebook {
+            &::before {
+                @include susanoo.icon(icons.$icon-facebook, false);
+            }
+        }
+        &.twitter {
+            &::before {
+                @include susanoo.icon(icons.$icon-twitter, false);
+            }
+        }
+        &.instagram {
+            &::before {
+                @include susanoo.icon(icons.$icon-instagram, false);
+            }
+        }
+        &.github {
+            &::before {
+                @include susanoo.icon(icons.$icon-github, false);
+            }
+        }
+    }
+    .content {
+        height: susanoo.rem-calc(600);
+        display: flex;
+        flex: {
+            direction: column;
+        }
+        justify-content: center;
+        padding: 0 susanoo.rem-calc(32);
+        @include susanoo.breakpoint(medium) {
+            flex: {
+                direction: row;
+            }
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    .left-side {
+        margin: {
+            top: susanoo.rem-calc(32);
+        }
+        order: 1;
+        @include susanoo.breakpoint(medium) {
+            order: unset;
+        }
+    }
+}
