@@ -1,0 +1,9 @@
+@use '../susanoo';
+
+section,
+.section {
+    padding: susanoo.rem-calc(32) susanoo.rem-calc(32);
+    background: {
+        color: #1a1a1a;
+    }
+}
