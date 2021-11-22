@@ -16,6 +16,9 @@ h6 {
 .headline {
     color: variables.$headline-color;
     letter-spacing: susanoo.rem-calc(8);
+    margin: {
+        bottom: susanoo.rem-calc(24);
+    }
 }
 
 .h1 {
