@@ -1,0 +1,38 @@
+@use '../susanoo';
+@use '../lists';
+
+.about-us {
+    .container {
+        display: flex;
+    }
+    .about {
+        align-self: center;
+        padding: {
+            right: susanoo.rem-calc(54);
+        }
+    }
+    .gallery {
+        @include lists.reset-list();
+        width: 100%;
+        display: grid;
+        grid: {
+            template: {
+                columns: repeat(auto-fill, minmax(min(#{susanoo.rem-calc(360)}, 100%), 1fr));
+            }
+            gap: susanoo.rem-calc(32);
+        }
+        li {
+
+        }
+        img {
+            width: 100%;
+            height: susanoo.rem-calc(460);
+            object-fit: cover;
+        }
+    }
+    .button {
+        margin: {
+            top: susanoo.rem-calc(60);
+        }
+    }
+}
