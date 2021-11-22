@@ -1,0 +1,34 @@
+@use '../susanoo';
+@use '../lists';
+
+.fjord-norway {
+    .gallery {
+        @include lists.reset-list();
+        display: grid;
+        grid: {
+            template: {
+                columns: repeat(auto-fill, minmax(min(#{susanoo.rem-calc(500)}, 100%), 1fr));
+            }
+            gap: susanoo.rem-calc(32);
+        }
+        img {
+            object-fit: cover;
+        }
+        img,
+        p {
+            margin: {
+                bottom: susanoo.rem-calc(42);
+            }
+        }
+    }
+    .introduction {
+        margin: {
+            bottom: susanoo.rem-calc(72);
+        }
+    }
+    p {
+        font: {
+            style: italic;
+        }
+    }
+}

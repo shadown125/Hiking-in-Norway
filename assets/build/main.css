@@ -1,1 +1,351 @@
-*,::before,::after{box-sizing:border-box}body,h1,h2,h3,h4,p,figure,blockquote,dl,dd{margin:0}ul[role=list],ol[role=list]{margin:0;padding:0;list-style:none}html:focus-within{scroll-behavior:smooth}body{min-height:100vh;font-family:system-ui,sans-serif;text-rendering:optimizeSpeed}p,ul:not([class]):not([role]) li,ol:not([class]):not([role]) li{line-height:1.5}a:not([class]){-webkit-text-decoration-skip:ink;text-decoration-skip-ink:auto;text-decoration-thickness:max(.08em,1px);text-underline-offset:.15em}img,picture,svg{display:block;max-width:100%}svg{fill:currentColor;pointer-events:none}[id]{scroll-margin-top:2rem}:focus{scroll-margin-bottom:8vh}input,button,textarea,select{font:inherit}@media (prefers-reduced-motion:reduce){html:focus-within{scroll-behavior:auto}*,::before,::after{transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}@font-face{font-family:"icomoon";font-weight:400;font-style:normal;font-display:block;src:url(../icomoon.woff?9xu6g5) format("woff"),url(../icomoon.svg?9xu6g5#icomoon) format("svg")}@font-face{font-family:"Bangers";font-style:normal;font-weight:400;src:local("Bangers Latin"),local("bangers-v13-latin-regular"),url(../bangers-v13-latin-regular.woff2) format("woff2");font-display:swap}@font-face{font-family:"Noto Sans JP";font-style:normal;font-weight:400;src:local("Noto Sans JP Regular"),local("Noto-Sans-JP-Regular"),url(../noto-sans-regular.woff2) format("woff2");font-display:swap}@font-face{font-family:"Noto Sans JP";font-style:normal;font-weight:700;src:local("Noto Sans JP Bold"),local("Noto-Sans-JP-Bold"),url(../noto-sans-700.woff2) format("woff2");font-display:swap}.staging{background-image:url(/hikingStage.jpg);background-position:center;-o-object-fit:cover;object-fit:cover}.staging .social-list{list-style:none;margin:0;padding:0;display:flex;margin-bottom:1.5rem}.staging .social-list li{margin:0}.staging .social-list li::before{content:none}.staging li span{display:none}.staging a::before{font-family:"icomoon";font-style:normal;font-weight:400;font-variant:normal;speak:never;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;margin:0 .625rem;font-size:1.75rem}.staging a.facebook::before{content:"\ea90"}.staging a.twitter::before{content:"\e901"}.staging a.instagram::before{content:"\ea92"}.staging a.github::before{content:"\eab0"}.staging .content{height:37.5rem;display:flex;flex-direction:column;justify-content:center;padding:0 2rem}@media only screen and (min-width:40em){.staging .content{flex-direction:row;justify-content:space-between;align-items:center}}.staging .left-side{margin-top:2rem;order:1}@media only screen and (min-width:40em){.staging .left-side{order:unset}}h1,h2,h3,h4,h5,h6{font-size:unset;font-family:"Bangers",sans-serif}.headline{color:#fff;letter-spacing:.5rem;margin-bottom:1.5rem}.h1{font-size:clamp(2.875rem,9vw,4.5rem)}.h2{font-size:clamp(2.5rem,7vw,3.75rem)}.h3{font-size:clamp(2.25rem,6vw,3.375rem)}.h4{font-size:clamp(1.875rem,5vw,3rem)}body{font-family:"Noto Sans JP",sans-serif;color:#fff}.wrapper{max-width:90rem;margin:0 auto}@media only screen and (min-width:64em){.inner-wrapper{padding:0 10rem}}a{display:block;text-decoration:none}.link{color:#fff;transition:color .2s linear}.link:hover{color:#ff6767}.link:focus:not(:focus-visible){outline:0}button{background:unset;border:unset;cursor:pointer}.button{position:relative;color:#fff;background-color:#fee856;padding:.5rem 1.75rem;transition:all .3s linear;overflow:hidden}.button:hover{background-color:#ff6767}.button:hover::before{transform:translateX(100%) rotate(45deg)}.button::before{content:"";position:absolute;background-color:#fff;top:0;left:0;width:100%;height:1rem;transform:translateX(-100%) rotate(45deg);transition:all .3s linear}section,.section{padding:4rem 2rem;background-color:#1a1a1a}.about-us .container{display:flex}.about-us .about{align-self:center;padding-right:3.375rem}.about-us .gallery{list-style:none;margin:0;padding:0;width:100%;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(22.5rem,100%),1fr));grid-gap:2rem}.about-us .gallery li{margin:0}.about-us .gallery li::before{content:none}.about-us .gallery img{width:100%;height:28.75rem;-o-object-fit:cover;object-fit:cover}.about-us .button{margin-top:3.75rem}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul[role=list],
+ol[role=list] {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  font-family: system-ui, sans-serif;
+  text-rendering: optimizeSpeed;
+}
+
+p,
+ul:not([class]):not([role]) li,
+ol:not([class]):not([role]) li {
+  line-height: 1.5;
+}
+
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+  text-decoration-thickness: max(0.08em, 1px);
+  text-underline-offset: 0.15em;
+}
+
+img,
+picture,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+svg {
+  fill: currentColor;
+  pointer-events: none;
+}
+
+[id] {
+  scroll-margin-top: 2rem;
+}
+
+*:focus {
+  scroll-margin-bottom: 8vh;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
+@font-face {
+  font-family: "icomoon";
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+  src: url("../icomoon.woff?9xu6g5") format("woff"), url("../icomoon.svg?9xu6g5#icomoon") format("svg");
+}
+@font-face {
+  font-family: "Bangers";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Bangers Latin"), local("bangers-v13-latin-regular"), url("../bangers-v13-latin-regular.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Noto Sans JP Regular"), local("Noto-Sans-JP-Regular"), url("../noto-sans-regular.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Noto Sans JP Bold"), local("Noto-Sans-JP-Bold"), url("../noto-sans-700.woff2") format("woff2");
+  font-display: swap;
+}
+.staging {
+  background-image: url("/hikingStage.jpg");
+  background-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.staging .social-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+.staging .social-list li {
+  margin: 0;
+}
+.staging .social-list li::before {
+  content: none;
+}
+.staging li span {
+  display: none;
+}
+.staging a::before {
+  font-family: "icomoon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  speak: never;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0 0.625rem;
+  font-size: 1.75rem;
+}
+.staging a.facebook::before {
+  content: "\ea90";
+}
+.staging a.twitter::before {
+  content: "\e901";
+}
+.staging a.instagram::before {
+  content: "\ea92";
+}
+.staging a.github::before {
+  content: "\eab0";
+}
+.staging .content {
+  height: 37.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 2rem;
+}
+@media only screen and (min-width: 40em) {
+  .staging .content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.staging .left-side {
+  margin-top: 2rem;
+  order: 1;
+}
+@media only screen and (min-width: 40em) {
+  .staging .left-side {
+    order: unset;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: unset;
+  font-family: "Bangers", sans-serif;
+}
+
+.headline {
+  color: white;
+  letter-spacing: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.h1 {
+  font-size: clamp(2.875rem, 9vw, 4.5rem);
+}
+
+.h2 {
+  font-size: clamp(2.5rem, 7vw, 3.75rem);
+}
+
+.h3 {
+  font-size: clamp(2.25rem, 6vw, 3.375rem);
+}
+
+.h4 {
+  font-size: clamp(1.875rem, 5vw, 3rem);
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  color: white;
+}
+
+.wrapper {
+  max-width: 90rem;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 64em) {
+  .inner-wrapper {
+    padding: 0 10rem;
+  }
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+.link {
+  color: white;
+  transition: color 0.2s linear;
+}
+.link:hover {
+  color: #ff6767;
+}
+.link:focus:not(:focus-visible) {
+  outline: none;
+}
+
+button {
+  background: unset;
+  border: unset;
+  cursor: pointer;
+}
+
+.button {
+  position: relative;
+  color: white;
+  background-color: #fee856;
+  padding: 0.5rem 1.75rem;
+  transition: all 0.3s linear;
+  overflow: hidden;
+}
+.button:hover {
+  background-color: #ff6767;
+}
+.button:hover::before {
+  transform: translateX(100%) rotate(45deg);
+}
+.button::before {
+  content: "";
+  position: absolute;
+  background-color: white;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1rem;
+  transform: translateX(-100%) rotate(45deg);
+  transition: all 0.3s linear;
+}
+
+section,
+.section {
+  padding: 4rem 2rem;
+  background-color: #1a1a1a;
+}
+
+.about-us .container {
+  display: flex;
+}
+.about-us .about {
+  align-self: center;
+  padding-right: 3.375rem;
+}
+.about-us .gallery {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(22.5rem, 100%), 1fr));
+  grid-gap: 2rem;
+}
+.about-us .gallery li {
+  margin: 0;
+}
+.about-us .gallery li::before {
+  content: none;
+}
+.about-us .gallery img {
+  width: 100%;
+  height: 28.75rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.about-us .button {
+  margin-top: 3.75rem;
+}
+
+.fjord-norway .gallery {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(31.25rem, 100%), 1fr));
+  grid-gap: 2rem;
+}
+.fjord-norway .gallery li {
+  margin: 0;
+}
+.fjord-norway .gallery li::before {
+  content: none;
+}
+.fjord-norway .gallery img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.fjord-norway .gallery img,
+.fjord-norway .gallery p {
+  margin-bottom: 2.625rem;
+}
+.fjord-norway .introduction {
+  margin-bottom: 4.5rem;
+}
+.fjord-norway p {
+  font-style: italic;
+}
