@@ -1,0 +1,12 @@
+@use '../susanoo';
+
+.after-section {
+    height: susanoo.rem-calc(400);
+    background: {
+        image: url("/hikingAfterSection.jpg");
+        position: center;
+        repeat: no-repeat;
+        size: cover;
+    }
+    object-fit: cover;
+}
