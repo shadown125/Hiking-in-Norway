@@ -1,0 +1,48 @@
+@use "../susanoo";
+@use '../lists';
+
+.trekking {
+    background: {
+        image: url("/hikingTrekking.jpg");
+        repeat: no-repeat;
+        position: center;
+        size: cover;
+    }
+    object-fit: cover;
+    .container {
+        @include lists.reset-list();
+        display: grid;
+        grid: {
+            template: {
+                columns: repeat(auto-fill, minmax(min(#{susanoo.rem-calc(500)}, 100%), 1fr));
+            }
+            gap: susanoo.rem-calc(54);
+        }
+        li {
+            :not(.headline) {
+                font: {
+                    style: italic;
+                }
+            }
+        }
+        .button {
+            margin: {
+                top: susanoo.rem-calc(46);
+            }
+        }
+    }
+    .classic-list {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        padding: {
+            left: unset;
+        }
+        li {
+            &::marker {
+                content: "•   ";
+            }
+        }
+    }
+}
