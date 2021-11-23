@@ -1,0 +1,6 @@
+backend:
+  name: github
+  repo: shadown125/Hiking-in-Norway
+
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
