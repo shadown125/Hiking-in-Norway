@@ -1,0 +1,30 @@
+@use '../susanoo';
+@use '../lists';
+
+.footer {
+    .container {
+        @include lists.reset-list();
+        display: grid;
+        grid: {
+            template: {
+                columns: repeat(auto-fit, minmax(min(#{susanoo.rem-calc(200)}, 100%), 1fr));
+            }
+            gap: susanoo.rem-calc(30);
+        }
+        align-items: end;
+        @include susanoo.breakpoint(medium) {
+            grid: {
+                gap: susanoo.rem-calc(100);
+            }
+        }
+        img {
+            width: 70%;
+            object-fit: cover;
+        }
+    }
+    .button {
+        margin: {
+            top: susanoo.rem-calc(32);
+        }
+    }
+}
